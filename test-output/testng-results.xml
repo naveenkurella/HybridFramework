@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-28T23:30:13 IST" name="Default suite" finished-at="2023-03-28T23:30:23 IST" duration-ms="10170">
+  <suite started-at="2023-04-13T22:16:59 IST" name="Default suite" finished-at="2023-04-13T22:17:04 IST" duration-ms="4880">
     <groups>
     </groups>
-    <test started-at="2023-03-28T23:30:13 IST" name="Default test" finished-at="2023-03-28T23:30:23 IST" duration-ms="10170">
-      <class name="com.testninjalabs.qa.testcases.Login">
-        <test-method signature="verifyLoginWithValidCreds()[pri:1, instance:com.testninjalabs.qa.testcases.Login@14555e0a]" started-at="2023-03-28T23:30:13 IST" name="verifyLoginWithValidCreds" finished-at="2023-03-28T23:30:19 IST" duration-ms="6420" status="PASS">
+    <test started-at="2023-04-13T22:16:59 IST" name="Default test" finished-at="2023-04-13T22:17:04 IST" duration-ms="4880">
+      <class name="com.testninjalabs.qa.testcases.Search">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testninjalabs.qa.testcases.Search@76c3e77a]" started-at="2023-04-13T22:16:59 IST" name="setup" finished-at="2023-04-13T22:17:03 IST" duration-ms="4298" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithValidCreds -->
-        <test-method signature="verifyLoginWithInvalidCreds()[pri:2, instance:com.testninjalabs.qa.testcases.Login@14555e0a]" started-at="2023-03-28T23:30:19 IST" name="verifyLoginWithInvalidCreds" finished-at="2023-03-28T23:30:23 IST" duration-ms="3703" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="searchWithValidProduct()[pri:1, instance:com.testninjalabs.qa.testcases.Search@76c3e77a]" started-at="2023-04-13T22:17:03 IST" name="searchWithValidProduct" finished-at="2023-04-13T22:17:04 IST" duration-ms="558" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidCreds -->
-      </class> <!-- com.testninjalabs.qa.testcases.Login -->
+        </test-method> <!-- searchWithValidProduct -->
+      </class> <!-- com.testninjalabs.qa.testcases.Search -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
