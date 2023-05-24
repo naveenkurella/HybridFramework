@@ -19,10 +19,14 @@ public class Register extends Base{
 	
 	WebDriver driver;
 	
+public Register() {
+		
+		super();
+	}
 	@BeforeMethod
 	public void setup() {
 		
-		driver=initializeBrowserAndOpenApplicatin("chrome");
+		driver=initializeBrowserAndOpenApplicatin(prop.getProperty("browser"));
 		driver.findElement(By.xpath("//span[text()='My Account']")).click();
 		driver.findElement(By.linkText("Register")).click(); 
 		
@@ -33,12 +37,12 @@ public class Register extends Base{
 	@Test(priority=1)
 	public void verifyRegisteringAnAccountWithManadatoryFields() {
 		
-	driver.findElement(By.name("firstname")).sendKeys("Nk");
-	driver.findElement(By.name("lastname")).sendKeys("Kurella");
+	driver.findElement(By.name("firstname")).sendKeys(dataProp.getProperty("firstName"));
+	driver.findElement(By.name("lastname")).sendKeys(dataProp.getProperty("lastName"));
 	driver.findElement(By.name("email")).sendKeys(Utils.generateTimesstamp());
-	driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys("1234567890");
-	driver.findElement(By.cssSelector("#input-password")).sendKeys("12345");
-	driver.findElement(By.cssSelector("#input-confirm")).sendKeys("12345");
+	driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys(dataProp.getProperty("telephone"));
+	driver.findElement(By.cssSelector("#input-password")).sendKeys(dataProp.getProperty("password/confirm"));
+	driver.findElement(By.cssSelector("#input-confirm")).sendKeys(dataProp.getProperty("password/confirm"));
 	driver.findElement(By.xpath("//input[@type='checkbox']")).click();
 	driver.findElement(By.xpath("//input[@type='submit']")).click();
 	String actual= driver.findElement(By.xpath("//div[@id='content']/h1")).getText();
@@ -79,6 +83,7 @@ public class Register extends Base{
 	driver.findElement(By.cssSelector("#input-confirm")).sendKeys("12345");
 	driver.findElement(By.xpath("//input[@name='newsletter' and @value='1']")).click();
 	driver.findElement(By.xpath("//input[@type='checkbox']")).click();
+	
 	
 	driver.findElement(By.xpath("//input[@type='submit']")).click();
 	//String actual= driver.findElement(By.xpath("//div[@id='content']/h1")).getText();
